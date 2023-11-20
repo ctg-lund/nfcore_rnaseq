@@ -1,0 +1,5 @@
+
+remove_ribo_rna : true
+ribo_database_manifest : '/projects/fs1/shared/references/nfrnaseq_rrna_dbs/rrna_db/rrna-db.txt'
+skip_stringtie : true
+skip_dupradar : true

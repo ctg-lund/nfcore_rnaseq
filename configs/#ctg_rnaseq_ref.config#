@@ -1,0 +1,20 @@
+profile{
+	human{
+	
+		     fasta =
+		     gtf =
+		     }
+		GRCH37 {
+		fasta = ''
+		gtf = ''
+		    }
+		}
+
+
+	mouse {
+	      GRCH39 {
+	      	     fasta =
+		     gtf =
+		     }
+	      }
+	}
