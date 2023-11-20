@@ -1,0 +1,29 @@
+// Adding profile
+profiles {
+    // CTG general profile
+    ctg {
+        singularity {
+            enabled = true
+            autoMounts = true
+            runOptions = '--bind /projects/fs1/'
+        }
+        process {
+            executor      = 'slurm'
+            cpus          = { 1 * task.attempt }
+            time          = { 10.h * task.attempt }
+            errorStrategy = 'retry'
+            maxRetries    = 1
+        }
+    }
+}
+
+process {
+    withName: 'NFCORE_RNASEQ:RNASEQ:ALIGN_STAR:STAR_ALIGN' {
+        memory = 40.GB
+	cpu = 16 
+    }
+}
+
+//Workdir, make it temporary
+workDir = "/projects/fs1/shared/Nextflow"
+
